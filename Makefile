@@ -12,8 +12,8 @@ pittsburgh: banks
 mountains: banks
 	./banks < mountains.sc
 
-rivers: banks
-	./banks < rivers.sc
+river: banks
+	./banks < river.sc
 
 pyramids: banks
 	./banks < pyramids.sc
