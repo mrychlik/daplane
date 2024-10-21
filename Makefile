@@ -1,8 +1,19 @@
+CC=gcc
+CFLAGS=-std=c90
 all: banks
 banks: banks.c
-	cc banks.c -o banks -DIT=XK_Page_Up -DDT=XK_Page_Down \
+	$(CC) $(CFLAGS)  banks.c -o banks -DIT=XK_Page_Up -DDT=XK_Page_Down \
 		-DUP=XK_Up -DDN=XK_Down -DLT=XK_Left -DRT=XK_Right \
 		-DCS=XK_Return -Ddt=0.02 -lm -lX11 -L/usr/X11R6/lib
 
-run: banks
+pittsburgh: banks
 	./banks < pittsburgh.sc
+
+mountains: banks
+	./banks < mountains.sc
+
+rivers: banks
+	./banks < rivers.sc
+
+pyramids: banks
+	./banks < pyramids.sc
